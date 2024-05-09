@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./sign-up-page-desktop.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500&display=swap"
+    />
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+  </head>
+  <body>
+    <div class="sign-up-page-desktop">
+      <div class="fade-out-left1"></div>
+      <section class="main">
+        <div class="content">
+          <header class="navbar">
+            <div class="logo1">
+              <div class="menu-items" id="menuItemsContainer">
+                <img
+                  class="shape-30-icon4"
+                  loading="lazy"
+                  alt=""
+                  src="./public/shape30.svg"
+                />
+
+                <div class="mintbank-container">
+                  <div class="mintbank4">MintBank</div>
+                </div>
+              </div>
+            </div>
+            <nav class="header1">
+              <nav class="header-buttons">
+                <div class="text-button32" id="textButton">Home</div>
+                <div class="text-button33" id="textButton1">About</div>
+                <div class="text-button34" id="textButton2">Help</div>
+                <div class="text-button35" id="textButton3">Services</div>
+                <div class="text-button36" id="textButton4">Security</div>
+              </nav>
+            </nav>
+            <div class="signup">
+              <div class="signup-form">
+                <div class="text-button37" id="textButton15">Sign Up</div>
+              </div>
+              <button class="button24" id="button">
+                <div class="submit-label">Login</div>
+              </button>
+            </div>
+          </header>
+          <div class="content-area1">
+            <div class="sign-up">
+              <div class="header-content">
+                <div class="heading-group">
+                  <h1 class="heading22">Sign Up</h1>
+                  <img
+                    class="abstract-design-icon5"
+                    loading="lazy"
+                    alt=""
+                    src="./public/abstract-design1.svg"
+                  />
+                </div>
+                <div class="paragraph18">
+                  Join our community today! Create an account to unlock
+                  exclusive features and personalized experiences.
+                </div>
+              </div>
+              <form id="sign-up-form" class="form-area">
+                <div class="input-fields">
+                  <div class="container33">
+                    <div class="sub-container13">
+                      <div class="input-field1">
+                        <input id="first-name"
+                          class="label"
+                          placeholder="Enter First Name"
+                          type="text" required
+                        />
+                      </div>
+                      <div class="input-field2">
+                        <input id="last-name"
+                          class="placeholder"
+                          placeholder="Enter Last Name"
+                          type="text" required
+                        />
+                      </div>
+                    </div>
+                    <div class="sub-container14">
+                      <div class="input-field3">
+                        <input id="email"
+                          class="text24"
+                          placeholder="Enter your Email"
+                          type="email"
+                        />
+                      </div>
+                      <div class="input-field4">
+                        <input
+                          class="text25"
+                          placeholder="Enter your Password"
+                          type="password"  
+                          id="passwordInput"  
+                        />
+                      
+                        <img
+                          class="icon52"
+                          alt="Toggle visibility"
+                          src="./public/icon7.svg"
+                          id="icon"
+                        />
+                      </div>
+                    </div>
+                    <div class="sub-container15">
+                      <div class="input-field5">
+                        <select class="text26" name="country" id="countrySelect">
+                          <option value="" disabled selected>Choose A Country</option>
+                          <option value="Afghanistan">Afghanistan</option>
+                          <option value="Albania">Albania</option>
+                          <option value="Algeria">Algeria</option>
+                          <!-- Add more options for other countries -->
+                        </select>
+                      </div>
+                      
+                      
+                      
+                      <div class="input-field6">
+                        <select class="text27" name="currency" id="currencySelect">
+                          <option value="" disabled selected>Choose a currency</option>
+                          <option value="USD">USD - United States Dollar</option>
+                          <option value="EUR">EUR - Euro</option>
+                          <option value="GBP">GBP - British Pound Sterling</option>
+                          <option value="JPY">JPY - Japanese Yen</option>
+                          <!-- Add more options for other currencies -->
+                        </select>
+                      </div>
+                    </div>
+                    <div class="sub-container16">
+                      <div class="input-text">
+                        <div class="zone-code-container">
+                          <span class="fixed-plus">+</span>
+                          <input id="country-code" class="input-field7" placeholder="213" type="text" maxlength="3" pattern="[0-9]*">
+                        </div>
+                      </div>
+
+                      <div class="input-field8">
+                        <input id="phone-number"
+                          class="text28"
+                          placeholder="Enter your Phone Number"
+                          type="text"
+                          pattern="[0-9]*"
+                          maxlength="10"
+/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="action-area">
+                  <div class="action-buttons1">
+                    <button id="submit" type="submit" class="button25">
+                      <div class="action-button-label1">Sign Up</div>
+                    </button>
+                    <button class="button26">
+                      <div class="text29">Login</div>
+                    </button>
+                    <div class="social-login">
+                      <div class="divider1">
+                        <div class="line10"></div>
+                      </div>
+                      <div class="text30">Or Continue with</div>
+                      <div class="divider2">
+                        <div class="line11"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="social-area">
+                  <div class="buttons-container2">
+                    <div class="icon-container12">
+                      <button class="button27">
+                        <img
+                          class="icon53"
+                          alt=""
+                          src="./public/icon-110.svg"
+                        />
+                      </button>
+                    </div>
+                    <div class="icon-container13">
+                      <button class="button28">
+                        <img class="icon54" alt="" src="./public/icon-21.svg" />
+                      </button>
+                    </div>
+                    <div class="icon-container14">
+                      <button class="button29">
+                        <img class="icon55" alt="" src="./public/icon-3.svg" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="info-content-wrapper">
+        <div class="info-content">
+          <div class="container34">
+            <div class="text-container9">
+              <h1 class="heading23">
+                <span>Our</span>
+                <span class="testimonials1"> Testimonials</span>
+              </h1>
+              <div class="paragraph19">
+                Lorem ipsum dolor sit amet consectetur. Blandit odio semper
+                risus pellentesque elit. Pellentesque eget ut imperdiet nulla
+                penatibus. Nascetur viverra arcu sed amet cursus purus.
+              </div>
+            </div>
+            <div class="tabs1">
+              <button class="button30">
+                <div class="tab-label">For Individuals</div>
+              </button>
+              <div class="button31" id="buttonContainer">
+                <div class="text31">For Businesses</div>
+              </div>
+            </div>
+          </div>
+          <div class="feature-list">
+            <div class="feature">
+              <button class="button32">
+                <img class="icon56" alt="" src="./public/icon-24.svg" />
+              </button>
+            </div>
+            <div class="feature-detail">
+              <div class="detail-content">
+                <div class="feature-divider">
+                  <div class="divider-wrapper">
+                    <div class="line12"></div>
+                  </div>
+                  <img class="icon57" alt="" src="./public/icon-25.svg" />
+
+                  <div class="divider-wrapper1">
+                    <div class="line13"></div>
+                  </div>
+                </div>
+                <div class="paragraph20">
+                  YourBank has been my trusted financial partner for years.
+                  Their personalized service and innovative digital banking
+                  solutions have made managing my finances a breeze.
+                </div>
+                <div class="name3">Sara T</div>
+              </div>
+            </div>
+            <div class="feature1">
+              <div class="detail-content1">
+                <div class="feature-divider1">
+                  <div class="divider-wrapper2">
+                    <div class="detail-icon-wrapper">
+                      <div class="detail-icon"></div>
+                    </div>
+                    <img class="icon58" alt="" src="./public/icon-25.svg" />
+
+                    <div class="line-frame">
+                      <div class="line14"></div>
+                    </div>
+                  </div>
+                  <div class="paragraph21">
+                    I recently started my own business, and YourBank has been
+                    instrumental in helping me set up my business accounts and
+                    secure the financing I needed. Their expert guidance and
+                    tailored solutions have been invaluable.
+                  </div>
+                  <div class="name4">John D</div>
+                </div>
+              </div>
+              <div class="feature2">
+                <div class="feature-divider2">
+                  <div class="divider-wrapper3">
+                    <div class="line15"></div>
+                  </div>
+                  <img class="icon59" alt="" src="./public/icon-25.svg" />
+
+                  <div class="divider-wrapper4">
+                    <div class="line16"></div>
+                  </div>
+                </div>
+                <div class="paragraph22">
+                  I love the convenience of YourBank's mobile banking app. It
+                  allows me to stay on top of my finances and make transactions
+                  on the go. The app is user-friendly and secure, giving me
+                  peace of mind.
+                </div>
+                <div class="name5">Emily G</div>
+                <div class="fade-out-right1"></div>
+              </div>
+            </div>
+            <div class="feature3">
+              <button class="button33">
+                <img class="icon60" alt="" src="./public/icon-28.svg" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="footer-section2">
+        <div class="footer-logo1">
+          <div class="logo-wrapper" id="logoWrapperContainer">
+            <img class="shape-30-icon5" alt="" src="./public/shape30.svg" />
+
+            <div class="mintbank-frame">
+              <div class="mintbank5">MintBank</div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-nav">
+          <div class="footer-buttons">
+            <div class="text-button38" id="textButton5">Home</div>
+            <div class="text-button39" id="textButton6">About</div>
+            <div class="text-button40" id="textButton7">Help</div>
+            <div class="text-button41" id="textButton8">Services</div>
+            <div class="text-button42" id="textButton9">Security</div>
+          </div>
+        </div>
+        <div class="footer-divider2"></div>
+        <div class="footer-actions1">
+          <div class="footer-action-buttons">
+            <div class="button34">
+              <div class="footer-action-icon">
+                <img class="icon61" alt="" src="./public/icon.svg" />
+              </div>
+              <div class="text-button43">MintBank@gmail.com</div>
+            </div>
+            <div class="button35">
+              <div class="icon-wrapper3">
+                <img class="icon62" alt="" src="./public/icon1.svg" />
+              </div>
+              <div class="text-button44">+213 91813 23 2309</div>
+            </div>
+            <div class="button36">
+              <div class="icon-wrapper4">
+                <img class="icon63" alt="" src="./public/icon2.svg" />
+              </div>
+              <div class="text-button45">ALGER_CENTRE</div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-divider3"></div>
+        <div class="container35">
+          <div class="social-media-links1">
+            <button class="button37">
+              <img class="icon64" alt="" src="./public/icon3.svg" />
+            </button>
+            <button class="button38">
+              <img class="icon65" alt="" src="./public/icon4.svg" />
+            </button>
+            <button class="button39">
+              <img class="icon66" alt="" src="./public/icon5.svg" />
+            </button>
+          </div>
+          <div class="copyright1">
+            <div class="text32">MintBank All Rights Reserved</div>
+          </div>
+          <div class="footer-links2">
+            <div class="footer-link-buttons">
+              <div class="text-button46">Privacy Policy</div>
+              <div class="line17"></div>
+              <div class="text-button47">Terms of Service</div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      var menuItemsContainer = document.getElementById("menuItemsContainer");
+      if (menuItemsContainer) {
+        menuItemsContainer.addEventListener("click", function (e) {
+          //TODO: page
+        });
+      }
+      
+      var textButton = document.getElementById("textButton");
+      if (textButton) {
+        textButton.addEventListener("click", function (e) {
+          //TODO: page
+        });
+      }
+      
+      var textButton1 = document.getElementById("textButton1");
+      if (textButton1) {
+        textButton1.addEventListener("click", function (e) {
+          //TODO: page
+        });
+      }
+      
+      var textButton2 = document.getElementById("textButton2");
+      if (textButton2) {
+        textButton2.addEventListener("click", function (e) {
+          //TODO: page
+        });
+      }
+      
+      var textButton3 = document.getElementById("textButton3");
+      if (textButton3) {
+        textButton3.addEventListener("click", function (e) {
+          //TODO: page
+        });
+      }
+      
+      var textButton4 = document.getElementById("textButton4");
+      if (textButton4) {
+        textButton4.addEventListener("click", function (e) {
+          //TODO: page
+        });
+      }
+      
+      var textButton15 = document.getElementById("textButton15");
+      if (textButton15) {
+        textButton15.addEventListener("click", function (e) {
+          //TODO: page
+        });
+      }
+      
+      var button = document.getElementById("button");
+      if (button) {
+        button.addEventListener("click", function (e) {
+          //TODO: page
+        });
+      }
+      
+      var icon = document.getElementById("icon");
+      if (icon) {
+        icon.addEventListener("click", function (e) {
+          var passwordInput = document.getElementById('passwordInput');
+    var icon = document.getElementById('icon');
+    if (passwordInput.type === 'password') {
+      passwordInput.type = 'text';
+      icon.src = './public/icon-visible.png'; // Change to visible icon if you have one
+    } else {
+      passwordInput.type = 'password';
+      icon.src = './public/icon7.svg'; // Change back to the original icon
+    }
+        });
+      }
+      
+      var buttonContainer = document.getElementById("buttonContainer");
+      if (buttonContainer) {
+        buttonContainer.addEventListener("click", function (e) {
+          //TODO: button
+        });
+      }
+      
+      var logoWrapperContainer = document.getElementById("logoWrapperContainer");
+      if (logoWrapperContainer) {
+        logoWrapperContainer.addEventListener("click", function (e) {
+          //TODO: page
+        });
+      }
+      
+      var textButton5 = document.getElementById("textButton5");
+      if (textButton5) {
+        textButton5.addEventListener("click", function (e) {
+          //TODO: page
+        });
+      }
+      
+      var textButton6 = document.getElementById("textButton6");
+      if (textButton6) {
+        textButton6.addEventListener("click", function (e) {
+          //TODO: page
+        });
+      }
+      
+      var textButton7 = document.getElementById("textButton7");
+      if (textButton7) {
+        textButton7.addEventListener("click", function (e) {
+          //TODO: page
+        });
+      }
+      
+      var textButton8 = document.getElementById("textButton8");
+      if (textButton8) {
+        textButton8.addEventListener("click", function (e) {
+          //TODO: page
+        });
+      }
+      
+      var textButton9 = document.getElementById("textButton9");
+      if (textButton9) {
+        textButton9.addEventListener("click", function (e) {
+          //TODO: page
+        });
+      }
+
+       // Reset dropdown to default option on page load
+  document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById('countrySelect').selectedIndex = 0;
+  });
+
+
+  // Reset dropdown to default option on page load
+  document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById('currencySelect').selectedIndex = 0;
+  });
+
+
+      </script>
+      <script type="module" src="register.js" defer></script>
+  </body>
+</html>
